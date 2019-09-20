@@ -1,0 +1,30 @@
+{
+  "name": "redact-the-web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build:firefox": "parcel build background.js content.js --out-dir dist/firefox",
+    "build:chrome": "parcel build background.js content.js --out-dir dist/chrome",
+    "copy:firefox": "cpy 'manifest.firefox.json' 'style.firefox.css' 'icons' 'dist/firefox'",
+    "copy:chrome": "cpy 'manifest.chrome.json' 'style.chrome.css' 'icons' 'dist/chrome'",
+    "rename:firefox": "rename 'dist/firefox/manifest.firefox.json' 'dist/firefox/manifest.json' && rename 'dist/firefox/style.firefox.css' 'dist/firefox/style.css'",
+    "rename:chrome": "rename 'dist/chrome/manifest.chrome.json' 'dist/chrome/manifest.json' && rename 'dist/chrome/style.chrome.css' 'dist/chrome/style.css'",
+    "zip:firefox": "web-ext build --source-dir dist/firefox --artifacts-dir dist/firefox",
+    "zip:chrome": "web-ext build --source-dir dist/chrome --artifacts-dir dist/chrome",
+    "magick": "cd screenshots && magick mogrify -resize 1280x800! *.png",
+    "prod": "npm-run-all clean build:* copy:* rename:* zip:*"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-transform-runtime": "^7.6.0",
+    "cpy-cli": "^2.0.0",
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.3",
+    "rename-cli": "^6.0.0",
+    "rimraf": "^3.0.0",
+    "web-ext": "^3.1.1",
+    "webextension-polyfill": "^0.4.0"
+  }
+}
