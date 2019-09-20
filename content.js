@@ -7,7 +7,6 @@ function insertCSS(file) {
   style.href = browser.extension.getURL('style.css')
   style.id = file
   document.getElementsByTagName('html')[0].appendChild(style)
-  // ;(document.head || document.documentElement).appendChild(style)
 }
 
 function removeCSS(file) {

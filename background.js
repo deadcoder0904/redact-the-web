@@ -1,8 +1,6 @@
 import browser from 'webextension-polyfill'
 let hasInserted = false
 
-const css = `* {font-family: redactedregular !important;}`
-
 browser.browserAction.onClicked.addListener(function(tab) {
   browser.tabs.executeScript({ file: 'content.js' })
 
