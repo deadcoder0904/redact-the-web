@@ -24,7 +24,7 @@
       "run_at": "document_start"
     }
   ],
-  "permissions": ["https://*/*", "http://*/*"],
+  "permissions": ["activeTab"],
   "web_accessible_resources": ["style.css"],
   "applications": {
     "gecko": {

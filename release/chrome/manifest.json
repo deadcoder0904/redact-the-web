@@ -26,5 +26,5 @@
     }
   ],
   "web_accessible_resources": ["style.css"],
-  "permissions": ["https://*/*", "http://*/*"]
+  "permissions": ["activeTab"]
 }
