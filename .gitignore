@@ -79,3 +79,9 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 .DS_Store
+
+# Chrome private key
+release/chrome.pem
+
+# Firefox env
+firefox.env

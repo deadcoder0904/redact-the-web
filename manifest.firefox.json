@@ -28,7 +28,7 @@
   "web_accessible_resources": ["style.css"],
   "applications": {
     "gecko": {
-      "id": "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}",
+      "id": "{d1f7e223-2750-4fce-93ac-39b4282b99d7}",
       "strict_min_version": "55.0"
     }
   }
