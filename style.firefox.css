@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Redacted Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('moz-extension://__MSG_@@extension_id__/Redacted-Regular.ttf')
+    format('truetype');
+}
+
 * {
-  font-family: redacted !important;
+  font-family: 'Redacted Regular' !important;
 }
