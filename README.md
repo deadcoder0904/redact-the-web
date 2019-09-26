@@ -41,8 +41,8 @@ Then run `./generate_icons.sh` to generate rest of the icons.
 	"clean:zip": "rimraf release/chrome/*.zip release/firefox/*.zip",
 	"build:parcel:firefox": "parcel build background.js content.js --out-dir release/firefox",
 	"build:parcel:chrome": "parcel build background.js content.js --out-dir release/chrome",
-	"copy:firefox": "cpy 'manifest.firefox.json' 'style.firefox.css' 'icons' 'release/firefox'",
-	"copy:chrome": "cpy 'manifest.chrome.json' 'style.chrome.css' 'icons' 'release/chrome'",
+	"copy:firefox": "cpy 'manifest.firefox.json' 'style.firefox.css' 'Redacted-Regular.ttf' 'icons' 'release/firefox'",
+	"copy:chrome": "cpy 'manifest.chrome.json' 'style.chrome.css' 'Redacted-Regular.ttf' 'icons' 'release/chrome'",
 	"rename:firefox": "rename 'release/firefox/manifest.firefox.json' 'release/firefox/manifest.json' && rename 'release/firefox/style.firefox.css' 'release/firefox/style.css'",
 	"rename:chrome": "rename 'release/chrome/manifest.chrome.json' 'release/chrome/manifest.json' && rename 'release/chrome/style.chrome.css' 'release/chrome/style.css'",
 	"zip:firefox": "web-ext build --source-dir release/firefox --artifacts-dir release/firefox",
@@ -82,11 +82,11 @@ Then run `./generate_icons.sh` to generate rest of the icons.
 
 # copy:firefox
 
-> Copy `manifest.firefox.json`, `style.firefox.css` & `icons` folder into the `release/firefox` folder.
+> Copy `manifest.firefox.json`, `style.firefox.css`, 'Redacted-Regular.ttf' & `icons` folder into the `release/firefox` folder.
 
 # copy:chrome
 
-> Copy `manifest.chrome.json`, `style.chrome.css` & `icons` folder into the `release/chrome` folder.
+> Copy `manifest.chrome.json`, `style.chrome.css`, 'Redacted-Regular.ttf' & `icons` folder into the `release/chrome` folder.
 
 # rename:firefox
 
