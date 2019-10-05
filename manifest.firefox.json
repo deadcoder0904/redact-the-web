@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Redact The Web",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Extension that redacts text on the web",
   "icons": {
     "16": "icon16.png",
